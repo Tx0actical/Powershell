@@ -14,8 +14,8 @@ $DestinationFile = "$($DestinationPath = 'backup-')$date.zip"
 if (-not (Test-Path $DestinationFile))
 {
     Compress-Archive -Path $Path -CompressionLevel 'Fastest' -DestinationPath "$($DestinationPath + 'backup-' + $date)"
-    Write-Host "Created backup at "$($DestinationPath + 'backup-' + $date).zip"
+    Write-Host "Created backup at $($DestinationPath + 'backup-' + $date).zip"
 } else 
 {
-    write-error "Today's backup already exists" 
+    Write-Error "Today's backup already exists"
 }
