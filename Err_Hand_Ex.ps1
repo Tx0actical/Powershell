@@ -19,6 +19,3 @@ if (-not (Test-Path $DestinationFile))
 {
     Write-Error "Today's backup already exists"
 }
-
-
-Write-Host "Anyways how are you feeling today?"
